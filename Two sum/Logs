@@ -5,3 +5,8 @@ I then though what if I sorted it and then used a two pointer approach where I c
 This worked better as I would only need to loop through the array once and even shorter as it was from both ends.
 An even faster way however was the use of hashamps where using the same logic as the first attempt, instead of looping to find the right value you used a hashmap to immediately search fr the value without having to go through it all.
 
+notes:
+
+enumerate - returns value and its index
+hashmap - python dictionary
+
