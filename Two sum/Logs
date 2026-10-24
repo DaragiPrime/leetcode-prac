@@ -1,0 +1,7 @@
+Initial attempt was brute force where you first compare using the first index. 
+It would then loop in a second loop to see if the value from the subtraction existed and return the index if it did.
+This was slow as you would have to reapetedly check through the whole array if the value existed and if it didn't the process would just restart all over again.
+I then though what if I sorted it and then used a two pointer approach where I compared the sum rather than the value from subtraction.
+This worked better as I would only need to loop through the array once and even shorter as it was from both ends.
+An even faster way however was the use of hashamps where using the same logic as the first attempt, instead of looping to find the right value you used a hashmap to immediately search fr the value without having to go through it all.
+
