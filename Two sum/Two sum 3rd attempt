@@ -1,0 +1,34 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        #pairs is a tuple which acts similiarly to a 2d array
+        #for every value in nums array it adds the index and the value into the pairs array so we can get still use the original indexes even after sorting
+        #enumerate returns the original array just with their indexes
+        #value is added first as sort() sorts tuples element by element meaning the actual value will be sorted and not the index value
+
+        pairs = [] 
+        for index, value in enumerate(nums):
+            pairs.append((value, index))
+        pairs.sort()
+
+        min = 0
+        max = len(nums)-1
+
+        while min < max:
+            sum = pairs[min][0] + pairs[max][0]
+
+            if sum == target:
+                return pairs[min][1],pairs[max][1]
+            elif sum > target:
+                max = max -1
+            else:
+                min = min + 1
+
+#building on 2nd attempt
+#fix to original indexes - enumerate to return both value and index, which can then be put in a new list to be sorted
+#O(n log n)
