@@ -20,3 +20,7 @@ class Solution(object):
                 max = max - 1
             else:
                 min = min + 1
+
+#almost works but doesn't return original indices
+#two pointer method
+#O(n log n)
