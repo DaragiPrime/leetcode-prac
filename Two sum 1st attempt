@@ -16,4 +16,5 @@ class Solution(object):
 
                 if x == nums[j]:
                     return i,j
-                    
+
+brute force O(n^2)
