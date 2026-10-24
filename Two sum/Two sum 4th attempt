@@ -1,0 +1,18 @@
+class Solution(object):
+
+    def twoSum(self, nums, target):
+
+        #create empty dictionary
+        #loop through array with the index and value
+        #it will try to find subtracted value from the library but as the library is initially empty it passes
+        #as it passes, if the subtracted value is not found, the value is then stored in the hashmap pointing to its index
+
+        num_map = {}
+        for i, num in enumerate(nums):
+            val = target - num
+            if val in num_map:
+                return [num_map[val], i]
+            num_map[num] = i
+
+#Hashmap
+#O(n)
