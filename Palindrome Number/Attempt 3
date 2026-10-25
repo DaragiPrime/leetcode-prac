@@ -32,3 +32,4 @@ class Solution(object):
             return False
 
 #method using integers without strings
+#works but really slow having to create a new list with the digits and a whole loop to make the number
