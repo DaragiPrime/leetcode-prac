@@ -1,0 +1,34 @@
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+
+        if x < 0 :
+            return False
+
+        list = []
+
+        firstnum = x % 10
+        list.append(firstnum)
+        num = x - firstnum
+
+        while num > 0 :
+
+            num = num / 10
+            list.append(num % 10)
+
+        result = 0
+        for i in list :
+            result = (result*10) + i
+        
+        if result / 10 != 0 :
+            result = result/10
+
+        if (result) == x :
+            return True
+        else:
+            return False
+
+#method using integers without strings
