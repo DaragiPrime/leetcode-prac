@@ -1,0 +1,20 @@
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+
+        #2pointer approach
+
+        string = str(x)
+        l = list(string)
+        min = 0
+        max = len(l) - 1 
+        while min < max :
+            if l[min] == l[max]:
+                min = min + 1
+                max = max - 1
+            else :
+                return False
+        return True
